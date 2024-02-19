@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  next:
+    image: martaelaessiosposit:latest
+    user: ${MY_UID}
+    build:
+      args:
+        BUILD_UID: ${MY_UID}
+      context: src/martaealessiosposi
+      additional_contexts:
+        - dockerfile-dir=build/images/next
+      dockerfile: ../../build/images/next/Dockerfile
+    ports:
+      - 8181:80
+    working_dir: /src/martaealessiosposi
+    volumes:
+      - ./src:/src
+      - ./.cache/yarn:/opt/cache/yarn
+      - ./.cache/npm:/home/node/npm
+    environment:
+      - NODE_ENV=development
+      - VIRTUAL_HOST=martaealessiosposi.loc
+      - VIRTUAL_PORT=80
+      - NEXT_PUBLIC_DRUPAL_BASE_URL=martaealessiosposi.loc
+      - NEXT_PUBLIC_NEXT_BASE_URL=martaealessiosposi.loc
+      - NEXT_TELEMETRY_DISABLED=1
+      - NEXT_CDN_IMAGE_DOMAIN=martaealessiosposi.loc
+    command: yarn dev --hostname 0.0.0.0 -p 80
