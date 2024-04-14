@@ -1,0 +1,10 @@
+
+#story .row img {
+  float: right;
+  height: 85px;
+  margin: 0 2em;
+}
+
+#story .row.reverse img {
+  float: left;
+}
