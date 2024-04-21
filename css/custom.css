@@ -1,10 +1,30 @@
 
 #story .row img {
   float: right;
-  height: 85px;
+  height: 75px;
   margin: 0 2em;
 }
 
 #story .row.reverse img {
   float: left;
 }
+
+#about .title-box {
+  display: grid;
+  align-items: center;
+  height: 200px;
+}
+
+.fa-spinner {
+  display: none;
+  color: #87baaa;
+}
+
+.text-success {
+  color: #87baaa !important;;
+}
+
+#msgSubmit {
+  margin-top: .5em;
+}
+
