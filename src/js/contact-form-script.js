@@ -2,7 +2,7 @@ $("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();
-        submitMSG(false, "Did you fill in the form properly?");
+        submitMSG(false, "Controlla di aver compilato tutti i campi!");
     } else {
         // everything looks good!
         event.preventDefault();
@@ -10,44 +10,53 @@ $("#contactForm").validator().on("submit", function (event) {
     }
 });
 
+function submitInProgress(){
+    $('#submit').css('display', 'none');
+    $('#contactForm').find('.fa-spinner').css('display', 'inline-block');
+}
+
+function submitDone(){
+    $('#submit').css('display', 'inline-block');
+    $('#contactForm').find('.fa-spinner').css('display', 'none');
+}
+
 
 function submitForm(){
     // Initiate Variables With Form Content
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var msg_subject = $("#msg_subject").val();
-    var message = $("#message").val();
-
+    var data = $("#contactForm").serialize();
+    submitInProgress();
 
     $.ajax({
         type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
-        success : function(text){
-            if (text == "success"){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false,text);
-            }
+        url: "https://script.google.com/macros/s/AKfycbzMxjrhCmngwRbXc-wPJ_SJp6WdQSkHjdoGixsn1xJBOUYImnPZtB0otFw04rPhtA8afA/exec",
+        data: data,
+        success: function(){
+            formSuccess();
+        },
+        error: function(){
+            formError();
+            submitMSG(false, "Qualcosa è andato storto, riprova più tardi.")
+        },
+        complete: function(){
+            submitDone();
         }
     });
 }
 
 function formSuccess(){
     $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
+    submitMSG(true, "Grazie per la tua conferma!")
 }
 
 function formError(){
-    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $("#contactForm").removeClass().addClass('animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         $(this).removeClass();
     });
 }
 
 function submitMSG(valid, msg){
     if(valid){
-        var msgClasses = "h3 text-center tada animated text-success";
+        var msgClasses = "h3 text-center animated text-success";
     } else {
         var msgClasses = "h3 text-center text-danger";
     }

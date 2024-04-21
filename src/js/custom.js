@@ -28,12 +28,12 @@
     ................................................. */
     
 	$(window).on('scroll', function () {
-		if ($(window).scrollTop() > 50) {
+		if ($(window).scrollTop() > 109) {
 			$('.top-header').addClass('fixed-menu');
-			$('#about').addClass('fixed-menu');
+			$('#intro').addClass('fixed-menu');
 		} else {
 			$('.top-header').removeClass('fixed-menu');
-			$('#about').removeClass('fixed-menu');
+			$('#intro').removeClass('fixed-menu');
 		}
 	});
 	
@@ -42,22 +42,26 @@
     ................................................. */
 	
 	$(document).ready(function() {
-		$('.popup-gallery').magnificPopup({
-			delegate: 'a',
-			type: 'image',
-			tLoading: 'Loading image #%curr%...',
-			mainClass: 'mfp-img-mobile',
-			gallery: {
-				enabled: true,
-				navigateByImgClick: true,
-				preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-			},
-			image: {
-				tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-				titleSrc: function(item) {
-					return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-				}
-			}
+		// $('.popup-gallery').magnificPopup({
+		// 	delegate: 'a',
+		// 	type: 'image',
+		// 	tLoading: 'Loading image #%curr%...',
+		// 	mainClass: 'mfp-img-mobile',
+		// 	gallery: {
+		// 		enabled: true,
+		// 		navigateByImgClick: true,
+		// 		preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		// 	},
+		// 	image: {
+		// 		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+		// 		titleSrc: function(item) {
+		// 			return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+		// 		}
+		// 	}
+		// });
+
+		$('.popup-gallery a').click(function(event) {
+			event.preventDefault();
 		});
 	});
 	

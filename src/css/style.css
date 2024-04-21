@@ -317,13 +317,13 @@ button:focus{
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 	-webkit-animation-name: fadeInDown;
-	animation-name: fadeInDown;
+	animation-name: fadeInDown; 
 	background: #fff;
 	z-index: 20;
 }
 
 .navbar-toggler{
-	border: 1px solid #61D2B4;
+	border: 1px solid #87baaa;
 	border-radius: 0;
 	margin: 16px 15px;
 	padding: 10px 10px;
@@ -333,7 +333,7 @@ button:focus{
 	transition: all 0.2s linear;
 }
 .navbar-toggler span{
-	background: #61D2B4;
+	background: #87baaa;
 	display: block;
 	width: 25px;
 	height: 2px;
@@ -388,7 +388,9 @@ button:focus{
 
 .lbox-details::before{
 	content: "";
-	background: rgba(0,0,0,0.5);
+	background-image: url(../images/frizzoni3.jpeg);
+	/* background-color: #87baaa; */
+	background-size: cover;
 	position: absolute;
 	top: 0px;
 	left: 0px;
