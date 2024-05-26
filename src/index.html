@@ -42,7 +42,6 @@
   <div id="preloader">
     <div class=" pulse">
       <i class="fa fa-heart-o" aria-hidden="true"> M & A</i>
-
     </div>
   </div><!-- end loader -->
   <!-- END LOADER -->
@@ -63,9 +62,9 @@
             <li><a class="nav-link active" href="#home">Home</a></li>
             <li><a class="nav-link" href="#story">Informazioni</a></li>
             <li><a class="nav-link" href="#contact">Conferma la partecipazione</a></li>
-            <li><a class="nav-link" href="#about">Un po di noi</a></li>
-            <li><a class="nav-link" href="#events">Location</a></li>
-            <li><a class="nav-link" href="#contact">Contatti</a></li>
+            <li><a class="nav-link" href="#gallery">Un po di noi</a></li>
+            <li><a class="nav-link" href="#location">Location</a></li>
+            <li><a class="nav-link" href="#listanozze">Lista Nozze</a></li>
           </ul>
         </div>
       </div>
@@ -108,7 +107,7 @@
 								<a href="#" class="btn">Contact</a>
 							</div>
 						</div>
-						
+
 					</div>
 					-->
         </div>
@@ -131,7 +130,7 @@
         <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
           <div class="timeline-date-content">
             <p class="mbr-timeline-date mbr-fonts-style display-font">
-              Ore 09:00
+              Dalle ore 09:00
             </p>
             <img src="images/icons/breakfast.png" />
           </div>
@@ -198,7 +197,7 @@
           <div class="timeline-text-content">
             <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Il Ricevimento</h4>
             <p class="mbr-timeline-text mbr-fonts-style display-7">
-              Saremo lieti di ricevervi presso la <i>Tenuta Frizzoni</i>, a Torre de Roveri (BG)
+              Saremo lieti di ricevervi presso la <a href="https://maps.app.goo.gl/TBgGtHGuxhiuuGyG8" target="_blank"><b><i>Tenuta Frizzoni</i></b></a>,<br/> a Torre de Roveri (BG)
             </p>
           </div>
         </div>
@@ -226,7 +225,7 @@
         <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
           <div class="timeline-date-content">
             <p class="mbr-timeline-date mbr-fonts-style display-font">
-              Ore 19:00
+              dalle ore 19:00 alle 23:00
             </p>
             <img src="images/icons/party.png" />
           </div>
@@ -246,7 +245,7 @@
   <!-- End Story -->
 
   <!-- Start Contact -->
-  <div id="contact" class="contact-box">
+  <div id="contact" class="contact-box bg-color-green">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -272,9 +271,9 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <select class=" d-block form-control" id="guest" name="guest" required
+                    <select class="form-control" id="guest" name="guest" required
                       data-error="Scegli il numero di ospiti">
-                      <option disabled selected>Numero di ospiti</option>
+                      <option disabled selected value="">Numero di ospiti</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -288,8 +287,8 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <select class=" d-block form-control" id="room" name="room">
-                      <option disabled selected>Ho bisogno di pernottare</option>
+                    <select class=" d-block form-control" id="room" name="room" required data-error="Se vieni da lontanto possiamo fornirti un alloggio!">
+                      <option disabled selected  value="">Ho bisogno di pernottare</option>
                       <option value="No">No</option>
                       <option value="Si">Si</option>
                     </select>
@@ -299,8 +298,8 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <select class=" d-block form-control" id="event" name="event" required
-                      data-error="Indicaci le tue pereferenze per gestire al meglio le location">
-                      <option disabled selected>Parteciperò a</option>
+                      data-error="Indicaci le tue pereferenze per gestire al meglio la giornata">
+                      <option disabled selected value="">Parteciperò a</option>
                       <option value="Tutto l'evento">Tutto l'evento</option>
                       <option value="Solo in Chiesa">Solo in Chiesa</option>
                       <option value="Solo al ricevimento">Solo al ricevimento</option>
@@ -342,51 +341,48 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row hidden">
 
-					<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="offset-2 col-lg-10 col-md-10 col-sm-12">
 						<div class="row align-items-center about-main-info">
-							<div class="col-lg-8 col-md-6 col-sm-12">
+							<div class="col-lg-6 col-md-6 col-sm-12">
 								<h2>La sposa <span>Marta</span></h2>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
+								<p></p>
 							</div>
-							<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="col-lg-4 col-md-4 col-sm-12">
 								<div class="about-img">
 									<img class="img-fluid rounded" src="images/lasposa2.png" alt="" />
 								</div>
 							</div>
 						</div>
 						<div class="row align-items-center about-main-info">
-							<div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="col-lg-5 col-md-6 col-sm-12 offset-1">
+                <h2>Lo sposo <span>Alessio</span></h2>
+              </div>
+							<div class="col-lg-4 col-md-4 col-sm-12 order-lg-first order-md-first">
 								<div class="about-img">
 									<img class="img-fluid rounded" src="images/losposo.png" alt="" />
 								</div>
 							</div>
-							<div class="col-lg-8 col-md-6 col-sm-12">
-								<h2> Lo sposo <span>Alessio</span></h2>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
-							</div>
 						</div>
             <div class="row align-items-center about-main-info">
-							<div class="col-lg-8 col-md-6 col-sm-12">
+							<div class="col-lg-6 col-md-6 col-sm-12">
 								<h2>La damigella <span>Beatrice</span></h2>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
 							</div>
-							<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="col-lg-4 col-md-4 col-sm-12">
 								<div class="about-img">
 									<img class="img-fluid rounded" src="images/bea.png" alt="" />
 								</div>
 							</div>
 						</div>
             <div class="row align-items-center about-main-info">
-							<div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="col-lg-5 col-md-6 col-sm-12 offset-1">
+                <h2>La mascotte <span>Aida</span></h2>
+              </div>
+							<div class="col-lg-4 col-md-4 col-sm-12 order-lg-first order-md-first">
 								<div class="about-img">
 									<img class="img-fluid rounded" src="images/aida.png" alt="" />
 								</div>
-							</div>
-							<div class="col-lg-8 col-md-6 col-sm-12">
-								<h2> La mascotte <span>Aida</span></h2>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
 							</div>
 						</div>
 					</div>
@@ -400,8 +396,16 @@
 
   <!-- Start Gallery -->
   <div id="gallery" class="gallery-box">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
+        <div class="col-lg-12">
+          <div class="title-box">
+            <h2>Un po di noi</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
         <ul class="popup-gallery clearfix">
           <li>
             <a href="#">
@@ -458,50 +462,53 @@
   <!-- End Gallery -->
 
   <!-- Start Events -->
-  <div id="events" class="events-box">
+  <div id="location" class="events-box">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="title-box">
-            <h2>Location</h2>
-            <p>Come raggiungere la Tenuta Frizzoni e altre informazini utili</p>
-          </div>
-        </div>
+      <div class="title-box">
+        <h2>Location</h2>
       </div>
       <div class="row">
-        <!-- <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="event-inner">
-            <div class="event-img">
-              <img class="img-fluid" src="images/event-img-01.jpg" alt="" />
-            </div>
-            <h2>2 June 2018 Engagement</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard </p>
-            <a href="#">See location ></a>
+          <div class="col-lg-5 col-md-5 col-sm-12">
+            <p>La Tenuta Frizzoni si trova in <a href="https://maps.app.goo.gl/TBgGtHGuxhiuuGyG8" target="_blank"><b>Località Tenuta Frizzoni a Torre dei Roveri, Bergamo.</b></a> Dista 40 minuti circa di auto da Bernareggio. Per
+              raggiungerla vi consigliamo di:</p>
+            <ul>
+              <li>prendere l'Autostrada <b>A4 Direzione Venezia</b></li>
+              <li>Uscire a <b>Seriate</b></li>
+              <li>Superato il casello seguire le indicazioni per <b>Bergamo / Orio al Serio</b></li>
+              <li>Tenere la destra e seguire le indicazioni per <b>Bergamo / Orio al Serio / Val Seriana</b></li>
+              <li>Proseguire lungo la tangenziale SUD seguendo le indicazioni per <b>Lovere / Val Camonica / Val Seriana</b></li>
+              <li>Prendere lo svincolo a destra seguendo per <b>Clusone / Val Seriana (SS 671)</b></li>
+              <li>Proseguire sulla SS 671 e prendere lo svincolo per <b>Pedrengo / Torre dei Roveri / Scanzorsciate (SP 69)</b></li>
+              <li>Alla rotonda prendere la <b>prima uscita</b> entrando in <b>Torre dei Roveri</b></li>
+              <li>Proseguite sempre dritto attraversando il paese e costeggiando i vigneti sulla sinistra, salendo sulla collina.</li>
+              <li>Dopo un paio di tornanti troverete l'ingresso della <b>Tenuta Frizzoni sulla destra</b>, segnalata da un <b>cartello bianco.</b></li>
+            </ul>
           </div>
+          <div class="col">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d178545.0592956381!2d9.402364377579202!3d45.63542584164509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4786b1c06364fa61%3A0x39746c7446ec1729!2sBernareggio%2C%20Province%20of%20Monza%20and%20Brianza!3m2!1d45.6473784!2d9.4059302!4m5!1s0x47815bdad359153d%3A0x5be7bb42eddf6281!2sTenuta%20Frizzoni%2C%20Localit%C3%A0%20Tenuta%20Frizzoni%2C%2024060%20Torre%20de&#39;%20Roveri%20BG!3m2!1d45.7028666!2d9.794890299999999!5e0!3m2!1sen!2sit!4v1716733584569!5m2!1sen!2sit"
+    width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Events -->
+
+  <!-- Start Events -->
+  <div id="listanozze" class="bg-color-green contact-box">
+    <div class="container">
+      <div class="title-box">
+        <h2>Lista Nozze</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <p>La vostra presenza al nostro matrimonio è l'unica cosa di cui abbiamo davvero bisogno! Se desiderate farci un regalo e contribuire alla nostra futura vita insieme, ci
+          farebbe piacere ricevere un vostro pensiero speciale.</p>
+          <h4 class="iban"><b>IBAN: IT47D0503401753000000053274</b></h4>
+          <p>Grazie di cuore per il vostro affetto e supporto. Siamo felici di condividerecon voi questo momento speciale della nostra vita!</p>
+          <p><i>Marta & Alessio</i></p>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="event-inner">
-            <div class="event-img">
-              <img class="img-fluid" src="images/event-img-02.jpg" alt="" />
-            </div>
-            <h2>3 June 2018 Main Ceremony </h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard </p>
-            <a href="#">See location ></a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="event-inner">
-            <div class="event-img">
-              <img class="img-fluid" src="images/event-img-03.jpg" alt="" />
-            </div>
-            <h2>4 June 2018 Wedding party </h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard </p>
-            <a href="#">See location ></a>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -512,7 +519,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p class="footer-company-name">All Rights Reserved. &copy; 2024</p>
+          <p class="footer-company-name"><i class="fa fa-heart-o" aria-hidden="true"> M & A</i></p>
         </div>
       </div>
     </div>
