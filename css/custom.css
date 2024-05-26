@@ -17,14 +17,46 @@
 
 .fa-spinner {
   display: none;
-  color: #87baaa;
+  color: #fff;
 }
 
 .text-success {
-  color: #87baaa !important;;
+  color: #fff !important;;
 }
 
 #msgSubmit {
-  margin-top: .5em;
+  margin-top: 2em;
 }
 
+#location ul li {
+  list-style: disc;
+  margin-left: 1em;
+}
+
+#about {
+  display: none;
+}
+
+#submit {
+  width: 200px;
+}
+
+.bg-color-green {
+  background-color: #87baaa;
+}
+
+.bg-color-green .title-box H2,
+.bg-color-green p,
+.bg-color-green h4
+ {
+  color: white;
+}
+.iban {
+  font-size: 1.3em;
+  text-align: center;
+  padding: 1em 0;
+}
+
+p a {
+  color: #87baaa;
+}
