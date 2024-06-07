@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: build/nginx/Dockerfile
-    image: europe-west1-docker.pkg.dev/martaealessiosposi/website/nginx:20240526
+    image: europe-west1-docker.pkg.dev/martaealessiosposi/website/nginx:1716741970
     environment:
       - VIRTUAL_HOST=martaealessiosposi.loc
       - VIRTUAL_PORT=80
