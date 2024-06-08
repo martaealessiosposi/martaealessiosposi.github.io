@@ -1,4 +1,4 @@
-
+{}
 #story .row img {
   float: right;
   height: 75px;
@@ -57,6 +57,7 @@
   padding: 1em 0;
 }
 
-p a {
+p a,
+.navbar-brand i{
   color: #87baaa;
 }

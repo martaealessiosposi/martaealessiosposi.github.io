@@ -386,11 +386,19 @@ button:focus{
 	position: relative;
 }
 
+#intro .lbox-details h1,
+#intro .lbox-details h2,
+#intro .lbox-details p {
+	text-shadow: #000 1px 0 80px;
+	color: #fff;
+}
+
 .lbox-details::before{
 	content: "";
 	background-image: url(../images/frizzoni3.jpeg);
 	/* background-color: #87baaa; */
 	background-size: cover;
+	background-position: top;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -402,24 +410,22 @@ button:focus{
 .lbox-details h1{
 	font-size: 68px;
 	font-family: Barlow;
-	color: #ffffff;
+	font-weight: bold;
 	position: relative;
 	z-index: 3;
 }
 
 .lbox-details h2{
 	font-size: 48px;
-	color: #ffffff;
+	font-weight: bold;
 	position: relative;
 	z-index: 3;
 }
 .lbox-details p{
-	color: #ffffff;
 	position: relative;
 	z-index: 3;
 }
 .lbox-details p strong{
-	color: #87baaa;
 	font-size: 40px;
 	font-family: Barlow;
 }
@@ -434,7 +440,8 @@ button:focus{
 	z-index: 3;
 }
 .lbox-details a.btn:hover{
-	background: #87baaa;
+	background: #fff;
+	color: #87baaa;
 }
 
 /*------------------------------------------------------------------
@@ -527,7 +534,7 @@ button:focus{
     border-radius: 50%;
     font-size: 30px;
     display: inline-block;
-    background-color: #eb9de7;
+    background-color: #f6d4f5;
     top: 20px;
     margin-left: -5px;
 }
